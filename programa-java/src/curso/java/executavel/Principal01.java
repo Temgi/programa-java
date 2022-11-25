@@ -1,6 +1,8 @@
-package curso.java.classes;
+package curso.java.executavel;
 
-public class Principal {
+import curso.java.classes.Aluno;
+
+public class Principal01 {
 	
 	public static void main(String[] args) {
 		
@@ -17,10 +19,10 @@ public class Principal {
 		aluno1.setSerieMatriculado("5");
 		aluno1.setNomeEscola("Escola JDev Treinamento");
 		
-		aluno1.getDisciplina().setNota1(90);
-		aluno1.getDisciplina().setNota2(80.8);
-		aluno1.getDisciplina().setNota3(70.9);
-		aluno1.getDisciplina().setNota4(90.7);
+//		aluno1.getDisciplina().setNota1(90);
+//		aluno1.getDisciplina().setNota2(80.8);
+//		aluno1.getDisciplina().setNota3(70.9);
+//		aluno1.getDisciplina().setNota4(90.7);
 		
 		System.out.println("Nome é = " + aluno1.getNome());
 		System.out.println("Idade é: " + aluno1.getIdade());

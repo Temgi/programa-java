@@ -1,8 +1,10 @@
-package curso.java.classes;
+package curso.java.executavel;
 
 import javax.swing.JOptionPane;
 
-public class Principal2 {
+import curso.java.classes.Aluno;
+
+public class Principal02 {
 	
 	public static void main(String[] args) {
 		
@@ -35,10 +37,10 @@ public class Principal2 {
 		aluno1.setSerieMatriculado(serie);
 		aluno1.setNomeEscola(escola);
 		
-		aluno1.getDisciplina().setNota1(Double.valueOf(nota1));
-		aluno1.getDisciplina().setNota2(Double.valueOf(nota2));
-		aluno1.getDisciplina().setNota3(Double.valueOf(nota3));
-		aluno1.getDisciplina().setNota4(Double.valueOf(nota4));
+//		aluno1.getDisciplina().setNota1(Double.valueOf(nota1));
+//		aluno1.getDisciplina().setNota2(Double.valueOf(nota2));
+//		aluno1.getDisciplina().setNota3(Double.valueOf(nota3));
+//		aluno1.getDisciplina().setNota4(Double.valueOf(nota4));
 		
 		System.out.println("Nome é = " + aluno1.getNome());
 		System.out.println("Idade é: " + aluno1.getIdade());

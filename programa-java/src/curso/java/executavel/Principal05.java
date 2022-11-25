@@ -1,8 +1,11 @@
-package curso.java.classes;
+package curso.java.executavel;
 
 import javax.swing.JOptionPane;
 
-public class Principal3 {
+import curso.java.classes.Aluno;
+import curso.java.classes.Disciplina2;
+
+public class Principal05 {
 	
 	public static void main(String[] args) {
 		
@@ -17,10 +20,7 @@ public class Principal3 {
 		String serie = JOptionPane.showInputDialog("Qual é a Série de Matrícula ?");
 		String escola = JOptionPane.showInputDialog("Nome da Escola ?");
 		
-		String nota1 = JOptionPane.showInputDialog("Digite a Nota 1");
-		String nota2 = JOptionPane.showInputDialog("Digite a Nota 2");
-		String nota3 = JOptionPane.showInputDialog("Digite a Nota 3");
-		String nota4 = JOptionPane.showInputDialog("Digite a Nota 4");
+
 		
 		Aluno aluno1 = new Aluno();
 		
@@ -35,12 +35,29 @@ public class Principal3 {
 		aluno1.setSerieMatriculado(serie);
 		aluno1.setNomeEscola(escola);
 		
-		aluno1.getDisciplina().setNota1(Double.valueOf(nota1));
-		aluno1.getDisciplina().setNota2(Double.valueOf(nota2));
-		aluno1.getDisciplina().setNota3(Double.valueOf(nota3));
-		aluno1.getDisciplina().setNota4(Double.valueOf(nota4));
+		Disciplina2 disciplina1= new Disciplina2();
+		disciplina1.setDisciplina("Banco de Dados");
+		disciplina1.setNota(90);
+		aluno1.getDisciplinas().add(disciplina1);
 		
-		System.out.println(aluno1.toString());
+		Disciplina2 disciplina2= new Disciplina2();
+		disciplina2.setDisciplina("Matemática");
+		disciplina2.setNota(80);
+		aluno1.getDisciplinas().add(disciplina2);
+		
+		Disciplina2 disciplina3= new Disciplina2();
+		disciplina3.setDisciplina("Geografia");
+		disciplina3.setNota(97);
+		aluno1.getDisciplinas().add(disciplina3);
+		
+		Disciplina2 disciplina4= new Disciplina2();
+		disciplina4.setDisciplina("Java Web");
+		disciplina4.setNota(70);
+		aluno1.getDisciplinas().add(disciplina4);
+		
+		
+		
+		System.out.println(aluno1);
 		System.out.println("Média da Nota é: " + aluno1.getMediaNotas());
 		System.out.println("Resultado : " + aluno1.getAlunoAprovado2());
 	}

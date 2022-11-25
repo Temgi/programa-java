@@ -1,19 +1,16 @@
 package curso.java.classes;
 
-public class Aluno {
+import java.util.ArrayList;
+import java.util.List;
+
+import curso.java.constantes.StatusAluno;
+
+public class Aluno extends Pessoa{
 	
-	private String nome;
-	private int idade;
-	private String dataNascimento;
-	private String registroGeral;
-	private String numeroCpf;
-	private String nomeMae;
-	private String nomePai;
 	private String dataMatricula;
 	private String nomeEscola;
-	private String serieMatriculado;
-	
-	private Disciplina disciplina = new Disciplina();
+	private String serieMatriculado;	
+	private List<Disciplina2> disciplinas = new ArrayList<Disciplina2>();
 
 	
 	public Aluno() {}
@@ -29,7 +26,11 @@ public class Aluno {
 	
 	
 	public double getMediaNotas() {
-		return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4()) / 4;
+		double somaNotas = 0.0;
+		for (Disciplina2 disciplina : disciplinas) {
+			somaNotas += disciplina.getNota();
+		}
+		return somaNotas / disciplinas.size();
 	}
 	
 	public boolean getAlunoAprovado() {
@@ -43,10 +44,14 @@ public class Aluno {
 	
 	public String getAlunoAprovado2() {
 		double media = this.getMediaNotas();
-		if(media >= 70) {
-			return "Aluno Está Aprovado";
+		if(media >= 50) {
+			if(media >= 70) {
+				return StatusAluno.APROVADO;				
+			}else {
+				return StatusAluno.RECUPERACAO;
+			}
 		}else {
-			return "Aluno Está Reprovado";
+				return StatusAluno.REPROVADO;
 		}
 	}
 	
@@ -112,11 +117,11 @@ public class Aluno {
 	}
 	
 	
-	public Disciplina getDisciplina() {
-		return disciplina;
+	public List<Disciplina2> getDisciplinas() {
+		return disciplinas;
 	}
-	public void setDisciplina(Disciplina disciplina) {
-		this.disciplina = disciplina;
+	public void setDisciplinas(List<Disciplina2> disciplinas) {
+		this.disciplinas = disciplinas;
 	}
 	
 	
@@ -125,7 +130,7 @@ public class Aluno {
 		return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento + ", registroGeral="
 				+ registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae + ", nomePai=" + nomePai
 				+ ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola + ", serieMatriculado="
-				+ serieMatriculado + ", disciplina=" + disciplina + "]";
+				+ serieMatriculado + "]";
 	}
 
 	
@@ -160,4 +165,20 @@ public class Aluno {
 			return false;
 		return true;
 	}	
+	
+	@Override
+	public boolean pessoaMaiorIdade() {
+		return super.idade >= 21;
+	}
+	
+	public String msgMaiorIdade() {
+		return this.pessoaMaiorIdade() ? "Aluno é Maior de Idade " : "Aluno Menor de Idade";
+	}
+
+	@Override
+	public double salario() {
+		return 1500.90;
+	}
+	
+	
 }

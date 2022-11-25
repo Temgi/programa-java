@@ -1,6 +1,8 @@
-package curso.java.classes;
+package curso.java.executavel;
 
-public class Principal4 {
+import curso.java.classes.Aluno;
+
+public class Principal04 {
 	public static void main(String[] args) {
 		
 		Aluno aluno1 = new Aluno();

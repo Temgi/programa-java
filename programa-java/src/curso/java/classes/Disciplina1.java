@@ -1,6 +1,6 @@
 package curso.java.classes;
 
-public class Disciplina {
+public class Disciplina1 {
 	
 	private double nota1;
 	private String disciplina1;
@@ -100,7 +100,7 @@ public class Disciplina {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Disciplina other = (Disciplina) obj;
+		Disciplina1 other = (Disciplina1) obj;
 		if (disciplina1 == null) {
 			if (other.disciplina1 != null)
 				return false;
