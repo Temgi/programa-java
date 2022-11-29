@@ -2,7 +2,7 @@ package curso.java.classes;
 
 import curso.java.interfaces.PermitirAcesso;
 
-public class Secretario extends Pessoa implements PermitirAcesso{
+public class Secretario4 extends Pessoa implements PermitirAcesso{
 	
 	private String registro;
 	private String nivelCargo;
@@ -11,8 +11,8 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 	private String login;
 	private String senha;
 	
-	public Secretario() {}
-	public Secretario(String login, String senha) {
+	public Secretario4() {}
+	public Secretario4(String login, String senha) {
 		this.login = login;
 		this.senha = senha;
 	}

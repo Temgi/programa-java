@@ -2,20 +2,11 @@ package curso.java.classes;
 
 import curso.java.interfaces.PermitirAcesso;
 
-public class Secretario extends Pessoa implements PermitirAcesso{
+public class Secretario3 extends Pessoa implements PermitirAcesso{
 	
 	private String registro;
 	private String nivelCargo;
 	private String experiencia;
-	
-	private String login;
-	private String senha;
-	
-	public Secretario() {}
-	public Secretario(String login, String senha) {
-		this.login = login;
-		this.senha = senha;
-	}
 	
 	public String getRegistro() {
 		return registro;
@@ -50,16 +41,13 @@ public class Secretario extends Pessoa implements PermitirAcesso{
 	}
 	
 	@Override
-	public boolean autenticar(String login, String senha) {
-		this.login = login;
-		this.senha = senha;
-		return autenticar();
+	public boolean autenticar() {
+		return false;
 	}
 	
 	@Override
-	public boolean autenticar() {
+	public boolean autenticar(String login, String senha) {
 		return login.equals("admin") && senha.equals("admin");
 	}
-	
 
 }

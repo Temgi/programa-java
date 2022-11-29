@@ -2,7 +2,7 @@ package curso.java.executavel;
 
 import curso.java.classes.Aluno;
 import curso.java.classes.Diretor;
-import curso.java.classes.Secretario;
+import curso.java.classes.Secretario1;
 
 public class Executavel1 {
 	public static void main(String[] args) {
@@ -15,7 +15,7 @@ public class Executavel1 {
 		diretor.setRegistroGeral("234234234");
 		diretor.setNome("Egidio");
 		
-		Secretario secretario = new Secretario();
+		Secretario1 secretario = new Secretario1();
 		secretario.setExperiencia("Adminstração");
 		secretario.setNumeroCpf("222.222.222-22");
 		
